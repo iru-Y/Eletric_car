@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:text="OLá Mundo!"
+        android:textAlignment= "center"
+        android:textColor="@color/white"
+        android:background="#E801F4"
+        tools:layout_editor_absoluteX="155dp"
+        tools:layout_editor_absoluteY="300dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        app:srcCompat="@android:drawable/checkbox_on_background"
+        tools:layout_editor_absoluteX="39dp"
+        tools:layout_editor_absoluteY="64dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
