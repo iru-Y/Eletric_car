@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Eletric Car</string>
+    <string name="nome">Nome</string>
+    <string name="sobrenome">Sobrenome</string>
+    <string name="enviar">Enviar</string>
+    <string name="meu_t_tulo">Meu título</string>
+    <string name="preco">Preço</string>
+    <string name="favoritos">Favoritos</string>
+    <string name="bateria">bateria</string>
+    <string name="potencia">potencia</string>
+    <string name="recarga">recarga</string>
 </resources>
