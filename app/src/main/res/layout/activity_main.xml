@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:paddingLeft="16dp"
@@ -42,7 +43,7 @@
 
     <ImageView
         android:id="@+id/iv_image"
-        android:layout_width="322dp"
+        android:layout_width="0dp"
         android:layout_height="118dp"
         android:layout_marginTop="16dp"
         android:paddingBottom="16dp"
@@ -138,4 +139,14 @@
         app:layout_constraintTop_toTopOf="@id/tv_recarga"
         />
 
+    <Button
+        android:id="@+id/btn_puxar_calcular"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/calcular_preco"
+
+        android:layout_margin="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,4 +9,9 @@
     <string name="bateria">bateria</string>
     <string name="potencia">potencia</string>
     <string name="recarga">recarga</string>
+    <string name="preco_kwh">Preço kwh</string>
+    <string name="km_percorrido">KM percorrido</string>
+    <string name="calcular">Calcular</string>
+    <string name="segunda_tela">Segunda tela</string>
+    <string name="calcular_preco">Calcular preço</string>
 </resources>
