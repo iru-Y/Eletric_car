@@ -4,17 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp"
     android:layout_margin="16dp">
 
     <TextView
         android:id="@+id/tv_titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16sp"
-        android:text="Carros Elétricos"
+        android:text="@string/carros_eletricos"
         android:textStyle="bold"
+
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         />
@@ -23,9 +21,10 @@
         android:id="@+id/tv_carros"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Carros"
+        android:text="@string/carros"
         android:layout_margin="16dp"
         android:textStyle="bold"
+
         app:layout_constraintTop_toBottomOf="@id/tv_titulo"
         app:layout_constraintStart_toStartOf="parent"
         />
@@ -37,108 +36,125 @@
         android:layout_marginStart="16dp"
         android:text="@string/favoritos"
         android:textStyle="bold"
+
         app:layout_constraintStart_toEndOf="@id/tv_carros"
         app:layout_constraintTop_toTopOf="@id/tv_carros"
         />
-
-    <ImageView
-        android:id="@+id/iv_image"
-        android:layout_width="0dp"
-        android:layout_height="118dp"
-        android:layout_marginTop="16dp"
-        android:paddingBottom="16dp"
-        android:src="@drawable/lucid_air"
-        app:layout_constraintLeft_toLeftOf="@id/tv_titulo"
-        app:layout_constraintTop_toBottomOf="@id/tv_carros"
-        />
-
-    <TextView
-        android:id="@+id/tv_preco"
-        android:layout_width="60dp"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_carros"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/preco"
-
-        app:layout_constraintTop_toBottomOf="@+id/iv_image"
         app:layout_constraintStart_toStartOf="parent"
-        />
+        android:layout_margin="16dp"
+        app:cardCornerRadius="26dp"
+        android:elevation="24dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_carros"
+        >
 
-    <TextView
-        android:id="@+id/tv_preco_value"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="R$ 300.000,00"
-        android:layout_marginStart="16dp"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_carros"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            >
 
-        app:layout_constraintStart_toEndOf="@+id/tv_preco"
-        app:layout_constraintTop_toBottomOf="@id/iv_image"
-        />
+            <ImageView
+                android:id="@+id/iv_image"
+                android:layout_width="0dp"
+                android:layout_height="118dp"
+                android:layout_marginTop="16dp"
+                android:paddingBottom="16dp"
+                android:src="@drawable/lucid_air"
 
-    <TextView
-        android:id="@+id/tv_bateria"
-        android:layout_width="60dp"
-        android:layout_height="wrap_content"
-        android:text="@string/bateria"
+                app:layout_constraintStart_toStartOf="parent"
+                />
 
+            <TextView
+                android:id="@+id/tv_preco"
+                style="@style/TextAppearance.AppCompat.Body2"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="@string/preco"
 
-        app:layout_constraintTop_toBottomOf="@+id/tv_preco"
-        />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_image" />
 
-    <TextView
-        android:id="@+id/tv_bateria_value"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="R$ 300.000,00"
-        android:layout_marginStart="16dp"
+            <TextView
+                android:id="@+id/tv_preco_value"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="R$ 300.000,00"
 
+                app:layout_constraintStart_toEndOf="@+id/tv_preco"
+                app:layout_constraintTop_toBottomOf="@id/iv_image" />
 
-        app:layout_constraintStart_toEndOf="@+id/tv_bateria"
-        app:layout_constraintTop_toTopOf="@id/tv_bateria"
-        />
+            <TextView
+                android:id="@+id/tv_bateria"
+                style="@style/TextAppearance.AppCompat.Body2"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="@string/bateria"
 
-    <TextView
-        android:id="@+id/tv_potencia"
-        android:layout_width="60dp"
-        android:layout_height="wrap_content"
-        android:text="@string/potencia"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_preco" />
 
+            <TextView
+                android:id="@+id/tv_bateria_value"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="R$ 300.000,00"
 
-        app:layout_constraintTop_toBottomOf="@+id/tv_bateria"
-        />
+                app:layout_constraintStart_toEndOf="@+id/tv_bateria"
+                app:layout_constraintTop_toTopOf="@id/tv_bateria" />
 
-    <TextView
-        android:id="@+id/tv_potencia_value"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="R$ 300.000,00"
-        android:layout_marginStart="16dp"
+            <TextView
+                android:id="@+id/tv_potencia"
+                style="@style/TextAppearance.AppCompat.Body2"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="@string/potencia"
 
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_bateria" />
 
-        app:layout_constraintStart_toEndOf="@+id/tv_potencia"
-        app:layout_constraintTop_toTopOf="@id/tv_potencia"
-        />
+            <TextView
+                android:id="@+id/tv_potencia_value"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="R$ 300.000,00"
 
-    <TextView
-        android:id="@+id/tv_recarga"
-        android:layout_width="60dp"
-        android:layout_height="wrap_content"
-        android:text="@string/recarga"
+                app:layout_constraintStart_toEndOf="@+id/tv_potencia"
+                app:layout_constraintTop_toTopOf="@id/tv_potencia" />
 
+            <TextView
+                android:id="@+id/tv_recarga"
+                style="@style/TextAppearance.AppCompat.Body2"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="@string/recarga"
 
-        app:layout_constraintTop_toBottomOf="@+id/tv_potencia"
-        />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_potencia" />
 
-    <TextView
-        android:id="@+id/tv_recarga_value"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="R$ 300.000,00"
-        android:layout_marginStart="16dp"
+            <TextView
+                android:id="@+id/tv_recarga_value"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="R$ 300.000,00"
 
+                app:layout_constraintStart_toEndOf="@+id/tv_recarga"
+                app:layout_constraintTop_toTopOf="@id/tv_recarga" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        app:layout_constraintStart_toEndOf="@+id/tv_recarga"
-        app:layout_constraintTop_toTopOf="@id/tv_recarga"
-        />
-
+    </androidx.cardview.widget.CardView>
     <Button
         android:id="@+id/btn_puxar_calcular"
         android:layout_width="0dp"

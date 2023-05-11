@@ -14,4 +14,7 @@
     <string name="calcular">Calcular</string>
     <string name="segunda_tela">Segunda tela</string>
     <string name="calcular_preco">Calcular preço</string>
+    <string name="calcular_autonomia">CALCULAR AUTONOMIA</string>
+    <string name="carros">Carros</string>
+    <string name="carros_eletricos">Carros Elétricos</string>
 </resources>
